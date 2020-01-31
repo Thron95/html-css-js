@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/18a2317df3.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style type="text/css"> 
+        
+        
+    </style>
+    <title>Inventario IT</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h1>INVENTARIO IT</h1>  
+        </div>
+            <div id="header">
+                <div class="izquierda">
+                    <ul class="nav">
+                        <li><button id="dispositivo" onclick="mostrarDispositivo();">+ DISPOSITIVO</button></li>  
+                        <li><button id="accesorio" onclick="mostrarAccesorio();">+ ACCESORIO</button></li> 
+                        <li><button id="periferico" onclick="mostrarPeriferico();">+ PERIFERICO</button></li> 
+                            <div id="popover__content_1">
+                                <div id="popover__triangulo_1"></div>
+                                    <form class="formInicio">
+                                        <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
+                                        <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
+                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                        <p><label>Usuario</label><input type="text" name="usuario" id="usuario" size="27"></p>
+                                        <p><label>Asignado</label><input type="text" name="asignado" id="asignado" size="27"></p>
+                                        <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
+                                        
+                                        <div id="buttonContent">
+                                        <input type="submit" value="Guardar">
+                                        <button>Cancelar</button>
+                                        </div>
+
+                                    </form>
+                            </div>
+                            <div id="popover__content_2">
+                                <div id="popover__triangulo_2"></div>
+                                    <form class="formInicio">
+                                        <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
+                                        <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
+                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                        <p><label>Usuario</label><input type="text" name="usuario" id="usuario" size="27"></p>
+                                        <p><label>Asignado</label><input type="text" name="asignado" id="asignado" size="27"></p>
+                                        <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
+                                        
+                                        <div id="buttonContent">
+                                        <input type="submit" value="Guardar">
+                                        <button>Cancelar</button>
+                                        </div>
+
+                                    </form>
+                            </div>
+                            <div id="popover__content_3">
+                                <div id="popover__triangulo_3"></div>
+                                    <form class="formInicio">
+                                        <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
+                                        <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
+                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                        <p><label>Usuario</label><input type="text" name="usuario" id="usuario" size="27"></p>
+                                        <p><label>Asignado</label><input type="text" name="asignado" id="asignado" size="27"></p>
+                                        <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
+                                        
+                                        <div id="buttonContent">
+                                        <input type="submit" value="Guardar">
+                                        <button>Cancelar</button>
+                                        </div>
+
+                                    </form>
+                            </div>
+                        <li><button id="dispositivos" ><li class="fa fa-bars"></li> DISPOSITIVOS</button></li>
+                        <li><button id="accesorios"><li class="fa fa-bars"></li> ACCESORIOS</button></li>
+                        <li><button id="perifericos"><li class="fa fa-bars"></li> PERIFERICOS</button></li>
+                        
+                    </ul>
+                </div>
+                <div class="derecha">
+                    <ul class="nav">
+                        <li><button id="cerrarSesion">CERRAR SESION</button></li>
+                    </ul>
+                </div>  
+            </div>       
+    </header>
+        
+    </div>
+</body>
+<script src="js/scripts.js"></script>
+</html>
