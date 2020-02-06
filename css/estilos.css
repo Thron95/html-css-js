@@ -4,13 +4,13 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	
 }
 body {
 	height: 100%;
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-
+ 
 }
 h1{
 	text-align: center;
@@ -28,15 +28,16 @@ header {
 #imagen{
 	background-image: url('../imagen/sendit_dev.png');
     background-repeat: no-repeat;
-	background-position: center;
 	width: 400px;
 	height: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 5%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 	background-size: cover;
-	position: relative;
-	opacity: 0.5;
+	position: absolute;
+	opacity: 0.2;
 	
 }
 .contenido {
@@ -86,17 +87,6 @@ header {
 .formulario input[type="submit"]:hover{
 	background: #779999;
 }
-footer {
-	background: #027745;
-	color: #fff;
-	bottom: 0;
-    position: absolute;
-	width: 100%;
-}
-footer .abajo {
-	font-size: 14px;
-	padding: 15px;	
-}
 
 /* pagina de inicio */
 
@@ -110,6 +100,7 @@ footer .abajo {
 
 ul, ol {
 	list-style:none;
+	display: inline-flex;
 }
 
 .nav > li {
@@ -142,6 +133,7 @@ ul, ol {
 .derecha {
 	float: right;
 }
+
 
 /* modal */
   #popover__content_1 {
@@ -219,6 +211,9 @@ ul, ol {
 	transition-duration: 0.3s;
 	transition-property: transform;
   }
+#formContenedor{
+	
+}
 .formInicio input[type="text"],
 .formInicio textarea{
 	border-radius: 5px;
@@ -230,7 +225,7 @@ ul, ol {
 	min-height: 50px;
 	border: 2px solid white;
 	display:inline-block;
-	  vertical-align:middle;
+	vertical-align:middle;
 	max-width: 63.5%;
 	max-height: 70px;
 }
@@ -247,4 +242,75 @@ label{
 	margin: 0 auto;
 	text-align: center;
 }
+
+
+#tablaContent{
+	padding-top: 5px;
+	width: 70%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	
+}
+#tabla{
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		
+}
+	  
+#tabla td, #tabla th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		widows: 100%;
+		
+}
+	  
+#tabla tr:nth-child(even){background-color: #f2f2f2;}
+	  
+#tabla tr:hover {background-color: #ddd;}
+	  
+#tabla th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		background-color: #027745;
+		color: white;
+}
+
+#divTitulo{
+	padding-top: 20px;
+	width: 20%;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family:Arial, sans-serif, helvetica;
+	font-size: 16px;
+	text-decoration: underline;
+	display: none;
+	
+
+}
+#footer{
+	position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background-color: #027745;
+}
+#logeado{
+	padding-top: 7px;
+	margin-left: 2%;
+	margin-right: auto;
+	text-align: left;
+	font-family:Arial, sans-serif, helvetica;
+	font-size: 12px;
+	color: white;
+	/* display: none; */
+}
+
+
 

@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="contenedor">
-            <h1>INVENTARIO IT</h1>  
+            <h1>Inventario IT</h1>  
         </div>
             <div id="header">
                 <div class="izquierda">
@@ -26,7 +26,8 @@
                         <li><button id="periferico" onclick="mostrarPeriferico();">+ PERIFERICO</button></li> 
                             <div id="popover__content_1">
                                 <div id="popover__triangulo_1"></div>
-                                    <form class="formInicio">
+                                <div id="formContenedor">
+                                    <form class="formInicio" onsubmit="return false">
                                         <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
                                         <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
                                         <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
@@ -36,33 +37,36 @@
                                         <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
                                         
                                         <div id="buttonContent">
-                                        <input type="submit" value="Guardar">
-                                        <button>Cancelar</button>
+                                        <input type="submit" value="Cargar" style="cursor: pointer;">
+                                        <button onclick="cancelar('popover__content_1');" style="cursor: pointer;">Cancelar</button>
                                         </div>
 
                                     </form>
+                                </div>
                             </div>
                             <div id="popover__content_2">
                                 <div id="popover__triangulo_2"></div>
-                                    <form class="formInicio">
-                                        <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
-                                        <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
-                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
-                                        <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
-                                        <p><label>Usuario</label><input type="text" name="usuario" id="usuario" size="27"></p>
-                                        <p><label>Asignado</label><input type="text" name="asignado" id="asignado" size="27"></p>
-                                        <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
-                                        
-                                        <div id="buttonContent">
-                                        <input type="submit" value="Guardar">
-                                        <button>Cancelar</button>
-                                        </div>
-
-                                    </form>
+                                    <div id="formContenedor">
+                                        <form class="formInicio" onsubmit="return false">
+                                            <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
+                                            <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
+                                            <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                            <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
+                                            <p><label>Usuario</label><input type="text" name="usuario" id="usuario" size="27"></p>
+                                            <p><label>Asignado</label><input type="text" name="asignado" id="asignado" size="27"></p>
+                                            <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
+                                            
+                                            <div id="buttonContent">
+                                            <input type="submit" value="Cargar" style="cursor: pointer;">
+                                            <button style="cursor: pointer;" onclick="cancelar('popover__content_2');" >Cancelar</button>
+                                            </div>
+                                        </form>
+                                    </div>
                             </div>
                             <div id="popover__content_3">
                                 <div id="popover__triangulo_3"></div>
-                                    <form class="formInicio">
+                                <div id="formContenedor">
+                                    <form class="formInicio" onsubmit="return false">
                                         <p><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" size="27"></p>
                                         <p><label for="serial">Serial</label><input type="text" name="serial" id="serial"size="27"></p>
                                         <p><label>Tipo</label><input type="text" name="tipo" id="tipo" size="27"></p>
@@ -71,28 +75,63 @@
                                         <p><label>Asignado</label><input type="text" name="asignado" id="asignado" size="27"></p>
                                         <p><label>Observaciones</label><textarea name="observaciones" id="observaciones"></textarea></p><br>
                                         
-                                        <div id="buttonContent">
-                                        <input type="submit" value="Guardar">
-                                        <button>Cancelar</button>
+                                        <div id="buttonContent" style="cursor: hand;">
+                                        <input type="submit" value="Cargar" style="cursor: pointer;"> 
+                                        <button style="cursor: pointer;" onclick="cancelar('popover__content_3');">Cancelar</button>
                                         </div>
-
-                                    </form>
+                                        
+                                    </form>                           
+                                    </div>
                             </div>
-                        <li><button id="dispositivos" ><li class="fa fa-bars"></li> DISPOSITIVOS</button></li>
-                        <li><button id="accesorios"><li class="fa fa-bars"></li> ACCESORIOS</button></li>
-                        <li><button id="perifericos"><li class="fa fa-bars"></li> PERIFERICOS</button></li>
-                        
+                            
+                        <hr style="background-color: white;"> <!--linea en el menu para separar  -->
+                        <li><button id="dispositivos" onclick="mostrarTabla('LISTADO DE DISPOSITIVOS');"><li class="fa fa-bars"></li> DISPOSITIVOS</button></li>
+                        <li><button id="accesorios" onclick="mostrarTabla('LISTADO DE ACCESORIOS');"><li class="fa fa-bars"></li> ACCESORIOS</button></li>
+                        <li><button id="perifericos" onclick="mostrarTabla('LISTADO DE PERIFERICOS');"><li class="fa fa-bars"></li> PERIFERICOS</button></li>
+                        <hr style="background-color: white;"> <!--linea en el menu para separar  -->
                     </ul>
                 </div>
                 <div class="derecha">
                     <ul class="nav">
-                        <li><button id="cerrarSesion">CERRAR SESION</button></li>
+                        <li><button id="cerrarSesion"><li class="fa fa-sign-out" aria-hidden="true"></li>CERRAR SESION</button></li>
                     </ul>
                 </div>  
             </div>       
     </header>
-        
+    <div id="imagen"></div>
+    <div id="divTitulo"></div>
+        <div id="tablaContent">
+            <i class="fa fa-2x fa-times" aria-hidden="true" style="cursor: pointer; float: right; color: #027745;" onclick="cerrarTabla();"></i>
+            <table id="tabla">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Serial</th>
+                    <th>Tipo</th>
+                    <th>Usuario</th>
+                    <th>Asignado</th>
+                    <th>Observaciones</th>
+                    <th></th>
+                </tr>
+                <tr>
+                   <td>Hola</td> 
+                   <td>Hola</td> 
+                   <td>Hola</td> 
+                   <td>Hola</td> 
+                   <td>Hola</td> 
+                   <td>Hola</td> 
+                   <td style="text-align: center;">
+                       <button style="cursor: pointer;">Obs.</button>
+                       <button style="cursor: pointer;">Edit</button>
+                   </td>
+                </tr>
+                 
+                
+            </table>
+        </div>
+    <div id="footer">
+        <div id="logeado">Logeado como: Usuario1</div>
     </div>
+        
 </body>
 <script src="js/scripts.js"></script>
 </html>
